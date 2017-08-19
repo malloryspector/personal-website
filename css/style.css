@@ -1,0 +1,29 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  height: 100%;
+  background-color: #1b1f23;
+}
+
+img, embed, object, video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* VISUAL STYLES SECTION */
+.text-heading {
+  color: #fff;
+  font-size: 40px;
+  padding-top: 80px;
+}
+
+.text-center {
+  text-align: center;
+}
