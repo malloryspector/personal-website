@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mallory Spector</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="styles/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body>
+  <body ng-app="portfolioSiteApp">
     <header class="row header text-uppercase">
       <h1 class="logo text-logo text-bold">Mallory Spector</h1>
       <ul class="nav text-nav">
@@ -79,22 +79,7 @@
           <li class="small-button">Courses</li>
         </ul>
         <div class="row">
-          <div class>
-            <h4 class="text-bold text-uppercase text-info-title">Wayfair</h4>
-            <p>Software Engineer, January 2016 - August 2017</p>
-            <ul class="joblist">
-              <li>Worked on the Development Platforms team, responsible for managing and developing tools and technical systems that enhance the efficiency of Engineering.</li>
-              <li>Collaborated with feature development teams to help automate pieces of the development workflow to support continuous integration and deployment.</li>
-              <li>Developed, researched, and managed both open-source libraries and internally created tools.</li>
-              <li>Responsible for teaching testing trainings and advising on testing best practices.</li>
-            </ul>
-            <p>Testing Development Analyst, April 2015 - January 2016</p>
-            <ul class="joblist">
-              <li>Worked closely with Agile software development teams to conduct manual testing of site appearance, functionality and performance across all brands.</li>
-              <li>Created testing plans to ensure site functionality and helped to drive process, technical and operational improvements.</li>
-              <li>Converted selenium acceptance tests from an internally developed framework to the open source Codeception framework and provided additional testing coverage.</li>
-            </ul>
-          </div>
+          <div ng-include="'views/experience.html'" ng-controller="ExperienceCtrl as experience"></div>
         </div>
       </div>
     </div>
@@ -111,6 +96,12 @@
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/experience.js"></script>
+    <script src="scripts/controllers/education.js"></script>
+    <script src="scripts/services/experienceService.js"></script>
     <script src="https://use.fontawesome.com/e4a5d17ac0.js"></script>
   </body>
 </html>
