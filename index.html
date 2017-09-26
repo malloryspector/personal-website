@@ -10,50 +10,57 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body ng-app="portfolioSiteApp">
+  <body>
     <header class="row header text-uppercase">
       <h1 class="logo text-logo text-bold">Mallory Spector</h1>
-      <ul class="nav text-nav">
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <div class="nav">
+        <span class="bars"><i class="fa fa-bars" style="font-size:30px;"></i></span>
+        <ul class="text-nav">
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </header>
 
     <div class="hero">
       <h2 class="text-bold text-hero">Hello, I'm Mallory!</h2>
-      <h2 class="text-hero-sub">I'm a developer, designer &amp; problem solver.</h2>
+      <h2 class="text-hero-sub">I'm a<span class="typing"></span></h2>
     </div>
 
     <div id="portfolio" class="portfolio">
       <div class="large-container">
         <h3 class="text-bold text-uppercase text-center text-section-header">Portfolio</h3>
-        <ul class="text-uppercase">
-          <li class="small-button selected">All</li>
-          <li class="small-button">Code</li>
-          <li class="small-button">Design</li>
-        </ul>
-        <div class="row">
-          <div class="feature-block">
-            <img src="images/test.png">
-          </div>
-          <div class="feature-block">
-            <img src="images/test.png">
-          </div>
-          <div class="feature-block">
-            <img src="images/test.png">
+        <div id="projects" class="row"></div>
+      </div>
+    </div>
+
+    <div id="resume" class="resume">
+      <div class="large-container">
+        <h3 class="text-bold text-uppercase text-center text-section-header">Resume</h3>
+        <div class="row resume-row">
+          <i class="fa fa-briefcase resume-icon text-center" style="font-size:40px;"></i>
+          <div id="experience" class="resume-content">
+            <h4 class="text-bold text-uppercase text-info-title">Experience</h4>
           </div>
         </div>
-        <div class="row">
-          <div class="feature-block">
-            <img src="images/test.png">
+        <div class="row resume-row">
+          <i class="fa fa-graduation-cap resume-icon text-center" style="font-size:40px;"></i>
+          <div id="education" class="resume-content">
+            <h4 class="text-bold text-uppercase text-info-title">Education</h4>
           </div>
-          <div class="feature-block">
-            <img src="images/test.png">
+        </div>
+        <div class="row resume-row">
+          <i class="fa fa-code resume-icon text-center" style="font-size:40px;"></i>
+          <div id="skills" class="resume-content">
+            <h4 class="text-bold text-uppercase text-info-title">Skills</h4>
           </div>
-          <div class="feature-block">
-            <img src="images/test.png">
+        </div>
+        <div class="row resume-row">
+          <i class="fa fa-leanpub resume-icon text-center" style="font-size:40px;"></i>
+          <div id="courses" class="resume-content">
+            <h4 class="text-bold text-uppercase text-info-title">Courses</h4>
           </div>
         </div>
       </div>
@@ -69,39 +76,23 @@
       </div>
     </div>
 
-    <div id="resume" class="resume">
-      <div class="small-container">
-        <h3 class="text-bold text-uppercase text-center text-section-header">Resume</h3>
-        <ul class="text-uppercase">
-          <li class="small-button selected">Experience</li>
-          <li class="small-button">Education</li>
-          <li class="small-button">Skills</li>
-          <li class="small-button">Courses</li>
-        </ul>
-        <div class="row">
-          <div ng-include="'views/experience.html'" ng-controller="ExperienceCtrl as experience"></div>
-        </div>
-      </div>
-    </div>
-
     <div id="contact" class="contact">
       <h3 class="text-bold text-uppercase text-center text-section-header">Contact</h3>
-      <p class="text-center">Here's how to contact me!</p>
+      <p class="text-center">Email</p>
+      <p class="text-center">LinkedIn</p>
+      <p class="text-center">GitHub</p>
     </div>
 
-    <footer class="footer row">
-        <p class="copyright">Copyright &copy; 2017 - Mallory Spector</p>
-        <div class="icons">
-          <i class="fa fa-github"></i>
-        </div>
+    <footer class="footer">
+      <p class="copyright text-center">Copyright &copy; 2017 - Mallory Spector</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/experience.js"></script>
-    <script src="scripts/controllers/education.js"></script>
-    <script src="scripts/services/experienceService.js"></script>
+    <script src="scripts/typeit.min.js"></script>
+    <script src="scripts/data/resume.js"></script>
+    <script src="scripts/data/portfolio.js"></script>
+    <script src="scripts/animation.js"></script>
     <script src="https://use.fontawesome.com/e4a5d17ac0.js"></script>
   </body>
 </html>
