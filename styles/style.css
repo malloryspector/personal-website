@@ -1,13 +1,3 @@
-/*
-bright blue: #4ac4ca
-dark blue: #2c828f
-charcoal: #222629
-dark grey: #474B4F
-light grey: #6b6e70
-almost white: #e9e9e9
-pretty white: #fafafa
-*/
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -18,7 +8,7 @@ pretty white: #fafafa
 body {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
-  color: #222629;
+  color: #474b4f;
 }
 
 img, embed, object, video {
@@ -27,7 +17,6 @@ img, embed, object, video {
 }
 
 /* VISUAL STYLES SECTION */
-
 .text-bold {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -52,7 +41,7 @@ img, embed, object, video {
 }
 
 .text-hero {
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   padding: 10px;
 }
@@ -73,8 +62,18 @@ img, embed, object, video {
   padding: 5px 0 5px 0;
 }
 
+.text-quote {
+  font-size: 28px;
+  line-height: 120%;
+}
+
+.text-light {
+  color: #9a9a9a;
+}
+
 .bars {
   display: none;
+  color: #000;
 }
 
 p {
@@ -91,22 +90,19 @@ a {
   text-decoration: none;
 }
 
-a:link {
-  color: #222629;
-}
-
+a:link,
 a:visited {
   color: #222629;
 }
 
-a:hover {
-  color: #4ac4ca;
-}
-
+a:hover,
 a:active {
   color: #4ac4ca;
 }
 
+a.selected:link,
+a.selected:active,
+a.selected:hover,
 a.selected:visited {
   color: #fff;
 }
@@ -121,7 +117,7 @@ a.selected:visited {
 }
 
 .large-container {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
@@ -167,12 +163,24 @@ a.selected:visited {
 .portfolio {
   background-color: #fafafa;
   padding: 40px;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .portfolio ul {
-  text-align: center;
-  padding-bottom: 30px;
+  padding: 30px 30px 30px 0;
+}
+
+.portfolio li {
+  padding: 10px 15px 10px 15px;
+  margin-right: 15px;
+}
+
+.portfolio a {
+  color: #fff;
+}
+
+#projects {
+  align-items: flex-start;
 }
 
 .feature-block {
@@ -183,13 +191,13 @@ a.selected:visited {
 .resume {
   background-color: #e9e9e9;
   padding: 40px;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .resume-row {
   align-items: flex-start;
   background-color: #fafafa;
-  padding: 30px 0 30px 0;
+  padding: 30px;
   margin-bottom: 20px;
   box-shadow: 0 0 1em #d7d7d7;
 }
@@ -197,49 +205,57 @@ a.selected:visited {
 .resume-icon {
   flex-basis: 20%;
   color: #e9e9e9;
+  margin-bottom: 20px;
 }
 
 .resume-content {
   flex-basis: 80%;
 }
 
-.resume ul {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-ul.joblist {
-  text-align: left;
-  list-style: circle;
-  margin: 10px 0 0 20px;
-}
-
-.joblist li {
-  display: block;
-  display: list-item;
-  font-size: 14px;
-  line-height: 140%;
-}
-
 .about {
   background-color: #fafafa;
   padding: 40px;
-  min-height: 100vh;
+  min-height: 95vh;
+}
+
+.about-row {
+  align-items: flex-start;
+}
+
+.about-container {
+  flex-basis: 48%;
+  padding-top: 20px;
 }
 
 .contact {
-  background-color: #e9e9e9;
+  background: #4ac4ca; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(135deg, #4ac4ca, #2754a7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #4ac4ca, #2754a7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #4ac4ca, #2754a7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #4ac4ca, #2754a7); /* Standard syntax */
+  background-size: 100%;
+  color: #fff;
   padding: 40px;
-  min-height: 100vh;
+  min-height: 95vh;
+}
+
+.contact ul {
+  padding: 30px;
+}
+
+.contact li {
+  display: block;
+  padding: 20px 15px 20px 15px;
+  margin: 15px;
 }
 
 .footer {
-  background-color: #222629;
-  color: #fff;
-  height: 50px;
+  background: #fff;
+  padding: 15px;
 }
 
-.copyright {
+.footer p {
+  color: #222629;
   font-size: 12px;
 }
 
@@ -265,33 +281,65 @@ ul.joblist {
   cursor: pointer;
 }
 
+.project-button {
+  font-size: 13px;
+  background-color: #c8c8c8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: #4ac4ca;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-button {
+  font-size: 13px;
+  background-color: #4ac4ca;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #c8c8c8;
+  color: #fff;
+  cursor: pointer;
+}
+
 /* Responsive */
 @media screen and (max-width: 1200px) {
-  .large-container {
-    width: 90%;
+  .small-container {
+    width: 80%;
     margin: auto;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .text-hero {
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .text-hero-sub {
+    font-size: 24px;
+    text-align: center;
+  }
+
   .row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    margin: auto;
     align-items: flex-start;
   }
 
   .logo {
-    flex-basis: 70%;
+    flex-basis: 100%;
     padding-top: 18px;
     color: #4ac4ca;
+    display: inline;
   }
 
   .nav {
-    padding-top: 14px;
-    flex-basis: 30%;
+    flex-basis: 100%;
     text-align: right;
   }
 
@@ -301,8 +349,10 @@ ul.joblist {
 
   .bars {
     display: inline;
+    text-align: right;
     padding-right: 20px;
     cursor: pointer;
+    float: right;
   }
 
   .nav.responsive a {
@@ -316,18 +366,22 @@ ul.joblist {
   }
 
   .large-container {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 
   .small-container {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 
   .feature-block {
     flex-basis: 100%;
     padding: 20px 0 20px 0;
+  }
+
+  .about-container {
+    flex-basis: 100%;
   }
 
   .resume-icon {
@@ -342,24 +396,40 @@ ul.joblist {
 }
 
 @media screen and (max-width: 500px) {
+  p {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .text-hero {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .text-hero-sub {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .text-quote {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
   .row {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    margin: auto;
     align-items: flex-start;
   }
 
   .logo {
-    flex-basis: 70%;
+    flex-basis: 100%;
     padding-top: 18px;
     color: #4ac4ca;
+    display: inline;
   }
 
   .nav {
-    padding-top: 14px;
-    flex-basis: 30%;
+    flex-basis: 100%;
     text-align: right;
   }
 
@@ -384,18 +454,22 @@ ul.joblist {
   }
 
   .large-container {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 
   .small-container {
-    width: 90%;
+    width: 95%;
     margin: auto;
   }
 
   .feature-block {
     flex-basis: 100%;
     padding: 20px 0 20px 0;
+  }
+
+  .about-container {
+    flex-basis: 100%;
   }
 
   .resume-icon {

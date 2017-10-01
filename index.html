@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mallory Spector</title>
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -12,9 +13,14 @@
   </head>
   <body>
     <header class="row header text-uppercase">
-      <h1 class="logo text-logo text-bold">Mallory Spector</h1>
+      <div class="logo">
+        <h1 class="text-logo text-bold">Mallory Spector
+          <span class="bars">
+            <i class="fa fa-bars" style="font-size:26px;"></i>
+          </span>
+        </h1>
+      </div>
       <div class="nav">
-        <span class="bars"><i class="fa fa-bars" style="font-size:30px;"></i></span>
         <ul class="text-nav">
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#resume">Resume</a></li>
@@ -26,18 +32,18 @@
 
     <div class="hero">
       <h2 class="text-bold text-hero">Hello, I'm Mallory!</h2>
-      <h2 class="text-hero-sub">I'm a<span class="typing"></span></h2>
+      <h2 class="text-hero-sub">Developer &amp; Designer</h2>
     </div>
 
     <div id="portfolio" class="portfolio">
       <div class="large-container">
         <h3 class="text-bold text-uppercase text-center text-section-header">Portfolio</h3>
-        <div id="projects" class="row"></div>
+        <div class="row" id="projects"></div>
       </div>
     </div>
 
     <div id="resume" class="resume">
-      <div class="large-container">
+      <div class="small-container">
         <h3 class="text-bold text-uppercase text-center text-section-header">Resume</h3>
         <div class="row resume-row">
           <i class="fa fa-briefcase resume-icon text-center" style="font-size:40px;"></i>
@@ -67,29 +73,44 @@
     </div>
 
     <div id="about" class="about">
-      <div class="small-container">
+      <div class="large-container">
         <h3 class="text-bold text-uppercase text-center text-section-header">About</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce purus nisl, ullamcorper a ornare vitae, ultrices et nunc. Maecenas mattis tellus quis leo semper, vitae lacinia velit viverra. Aliquam eu fermentum libero, in rhoncus odio. Nulla dapibus lacus quis turpis aliquam, sagittis dignissim tortor tempus. Mauris ut elementum metus, a ornare leo. Ut quis leo finibus, consequat nisi in, faucibus odio. Curabitur cursus aliquet condimentum. Fusce massa leo, iaculis ultrices sem a, ullamcorper bibendum orci.</p>
-        <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce purus nisl, ullamcorper a ornare vitae, ultrices et nunc. Maecenas mattis tellus quis leo semper, vitae lacinia velit viverra. Aliquam eu fermentum libero, in rhoncus odio. Nulla dapibus lacus quis turpis aliquam, sagittis dignissim tortor tempus. Mauris ut elementum metus, a ornare leo. Ut quis leo finibus, consequat nisi in, faucibus odio. Curabitur cursus aliquet condimentum. Fusce massa leo, iaculis ultrices sem a, ullamcorper bibendum orci.</p>
-        <br>
+        <div class="row about-row">
+          <div class="about-container">
+            <img src="images/bio_small.jpg" srcset="images/bio_small.jpg 500w, images/bio_medium.jpg 1000w, images/bio_large.jpg 1500w" alt="bio" sizes="100vw">
+          </div>
+          <div class="about-container">
+            <h4 class="text-quote">Hello! I'm a software developer with an eye for design and passion for creating great user experiences.</h4>
+            <br>
+            <p class="text-light">I recently relocated to the San Diego area from Boston, where I was working as a Software Engineer at Wayfair, and I am currently working towards a Masters degree in Software Engineering.</p>
+            <br>
+            <p class="text-light">My path into the world of Software Engineering began after working for a few years as a Graphic Designer. I realized I loved the problem solving and creativity involved with design but found myself more intrigued by the backend functionality of landing pages and other digital pieces. I began teaching myself how to code and was instantly hooked.</p>
+            <br>
+            <p class="text-light">At Wayfair, I worked on both the Testing Development team, as well as the Development Platforms team, where I helped manage and develop tools and infrastructure to increase the efficiency and enhance the day to day experiences of other Software Engineers. I love tackling new challenges and finding solutions to complex problems with code, and am excited to continue to work in a field that can have an impact on so many industries, and is constantly changing and growing.</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="contact" class="contact">
-      <h3 class="text-bold text-uppercase text-center text-section-header">Contact</h3>
-      <p class="text-center">Email</p>
-      <p class="text-center">LinkedIn</p>
-      <p class="text-center">GitHub</p>
+      <div class="small-container">
+        <h3 class="text-bold text-uppercase text-center text-section-header">Contact</h3>
+        <p class="text-center">Please feel free to reach out!</p>
+        <ul class="text-uppercase text-center">
+          <a href="mailto:malloryspector@gmail.com"><li class="contact-button">Email</li></a>
+          <a href="https://www.linkedin.com/in/mallory-spector-4806a733/" target="_blank"><li class="contact-button">LinkedIn</li></a>
+          <a href="https://github.com/malloryspector" target="_blank"><li class="contact-button">Github</li></a>
+        </ul>
+      </div>
     </div>
 
     <footer class="footer">
-      <p class="copyright text-center">Copyright &copy; 2017 - Mallory Spector</p>
+      <div class="small-container">
+        <p class="text-bold text-center">Copyright &copy; Mallory Spector 2017</p>
+      </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
-    <script src="scripts/typeit.min.js"></script>
     <script src="scripts/data/resume.js"></script>
     <script src="scripts/data/portfolio.js"></script>
     <script src="scripts/animation.js"></script>

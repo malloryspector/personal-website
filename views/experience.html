@@ -1,9 +1,0 @@
-<div ng-repeat="employer in experience.allJobs">
-  <h4 class="text-bold text-uppercase text-info-title">{{employer.company}}</h4>
-  <span ng-repeat="job in employer.jobs">
-    <p>{{job.title}}</p>
-    <ul class="joblist">
-      <li ng-repeat="bullet in job.description">{{bullet}}</li>
-    </ul>
-  </span>
-</div>

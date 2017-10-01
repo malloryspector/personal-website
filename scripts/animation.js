@@ -1,21 +1,6 @@
 $(document).ready(function() {
 
   /*
-   * Hero Typing Animation
-   */
-  $('.typing').typeIt({
-    cursor: true,
-    loop: true,
-    lifeLike: true
-  })
-  .tiPause(2000)
-  .tiType('developer').tiPause(2000).tiDelete(9)
-  .tiType('designer').tiPause(2000).tiDelete(8)
-  .tiType('creative thinker').tiPause(2000).tiDelete(16)
-  .tiType('problem solver').tiPause(2000).tiDelete(14)
-  .tiType('fitness enthusiast').tiPause(2000).tiDelete(18);
-
-  /*
    * Navigation
    */
   var currentHash = '';
@@ -24,13 +9,15 @@ $(document).ready(function() {
 
   $('a[href^="#"]').click(function(e) {
     e.preventDefault();
-    $('.nav').toggleClass('responsive');
+    if ($(window).width() < 768) {
+      $('.nav').toggleClass('responsive');
+    }
     if (this.hash !== currentHash) {
       navElement = this;
       currentHash = this.hash;
       scrollTo = $(currentHash).offset().top;
 
-      $('body').animate(
+      $('body, html').animate(
         {scrollTop: scrollTo - 60},
         1000,
         function() {
@@ -50,13 +37,15 @@ $(document).ready(function() {
           && referenceElement.position().top + referenceElement.height() > scrollPosition) {
         $('.nav').find('a').removeClass('selected');
         currentNavLink.addClass('selected');
+        currentHash = this.hash;
       } else if (scrollPosition === 60) {
         $('.nav').find('a').removeClass('selected');
+        currentHash = '';
       }
     });
   });
 
-  $('.bars').click(function(e) {
+  $('.bars').click(function() {
     $('.nav').toggleClass('responsive');
   });
 
