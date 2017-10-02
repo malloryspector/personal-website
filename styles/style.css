@@ -47,7 +47,9 @@ img, embed, object, video {
 }
 
 .text-hero-sub {
-  font-size: 30px;
+  /*font-size: 30px;*/
+  font-size: 28px;
+  line-height: 120%;
   text-align: center;
 }
 
@@ -121,7 +123,8 @@ a.selected:visited {
   margin: auto;
 }
 
-.small-container {
+.small-container,
+.hero-container {
   width: 50%;
   margin: auto;
 }
@@ -179,7 +182,7 @@ a.selected:visited {
   color: #fff;
 }
 
-#projects {
+.projects {
   align-items: flex-start;
 }
 
@@ -197,7 +200,7 @@ a.selected:visited {
 .resume-row {
   align-items: flex-start;
   background-color: #fafafa;
-  padding: 30px;
+  padding: 30px 0 30px 0;
   margin-bottom: 20px;
   box-shadow: 0 0 1em #d7d7d7;
 }
@@ -222,8 +225,13 @@ a.selected:visited {
   align-items: flex-start;
 }
 
-.about-container {
-  flex-basis: 48%;
+.about-image {
+  flex-basis: 30%;
+  padding-top: 20px;
+}
+
+.about-description {
+  flex-basis: 66%;
   padding-top: 20px;
 }
 
@@ -313,6 +321,11 @@ a.selected:visited {
     width: 80%;
     margin: auto;
   }
+
+  .hero-container {
+    width: 70%;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -365,13 +378,14 @@ a.selected:visited {
     background-color: #d7d7d7;
   }
 
-  .large-container {
+  .large-container,
+  .small-container {
     width: 95%;
     margin: auto;
   }
 
-  .small-container {
-    width: 95%;
+  .hero-container {
+    width: 80%;
     margin: auto;
   }
 
@@ -380,8 +394,10 @@ a.selected:visited {
     padding: 20px 0 20px 0;
   }
 
-  .about-container {
+  .about-image,
+  .about-description {
     flex-basis: 100%;
+    padding-top: 20px;
   }
 
   .resume-icon {
@@ -453,11 +469,7 @@ a.selected:visited {
     background-color: #d7d7d7;
   }
 
-  .large-container {
-    width: 95%;
-    margin: auto;
-  }
-
+  .large-container,
   .small-container {
     width: 95%;
     margin: auto;
@@ -468,8 +480,10 @@ a.selected:visited {
     padding: 20px 0 20px 0;
   }
 
-  .about-container {
+  .about-image,
+  .about-description {
     flex-basis: 100%;
+    padding-top: 20px;
   }
 
   .resume-icon {
