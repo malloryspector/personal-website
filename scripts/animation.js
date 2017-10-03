@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  $('.typing').typeIt({
+    cursor: true,
+    lifeLike: true
+  }).tiType("Hello, I'm Mallory ")
+
   /*
    * Navigation
    */
