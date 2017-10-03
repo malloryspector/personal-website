@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   $('a[href^="#"]').click(function(e) {
     e.preventDefault();
-    if ($(window).width() < 768) {
+    if ($('.nav').hasClass('responsive')) {
       $('.nav').toggleClass('responsive');
     }
     if (this.hash !== currentHash) {
@@ -25,6 +25,14 @@ $(document).ready(function() {
           $(navElement).addClass('selected');
         }
       );
+    }
+  });
+
+  $('.logo').click(function(e) {
+    if (!$(e.target).hasClass('fa-bars')) {
+      $('body, html').animate(
+        {scrollTop: 0},
+        1000);
     }
   });
 

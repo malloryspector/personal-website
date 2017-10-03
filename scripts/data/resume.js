@@ -18,16 +18,6 @@ var jobs = [
     "company": "Sasaki Associates, Inc.",
     "title": "Graphic Designer",
     "date": "May 2011 - May 2013"
-  },
-  {
-    "company": "Dana-Farber Cancer Institute",
-    "title": "Graphic Design Intern",
-    "date": "July 2010 - December 2010"
-  },
-  {
-    "company": "Dana-Farber Cancer Institute",
-    "title": "Graphic Design Intern",
-    "date": "July 2009 - December 2009"
   }
 ];
 
