@@ -3,7 +3,9 @@ $(document).ready(function() {
   $('.typing').typeIt({
     cursor: true,
     lifeLike: true
-  }).tiType("Hello, I'm Mallory ")
+  })
+  .tiPause(1000)
+  .tiType("Hello, I'm Mallory ")
 
   /*
    * Navigation
@@ -34,7 +36,7 @@ $(document).ready(function() {
   });
 
   $('.logo').click(function(e) {
-    if (!$(e.target).hasClass('fa-bars')) {
+    if (!$(e.target).hasClass('fa-bars') && !$(e.target).hasClass('bars')) {
       $('body, html').animate(
         {scrollTop: 0},
         1000);

@@ -387,7 +387,7 @@ a.selected:visited {
   .bars {
     display: inline;
     text-align: right;
-    padding-right: 20px;
+    padding: 0 20px;
     cursor: pointer;
     float: right;
   }
@@ -442,7 +442,7 @@ a.selected:visited {
   }
 
   .text-hero {
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     padding: 10px;
   }
