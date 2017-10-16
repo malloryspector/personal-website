@@ -88,6 +88,18 @@ p {
   line-height: 140%;
 }
 
+i.fa {
+  font-size: 40px;
+}
+
+i.fa.fa-bars {
+  font-size: 26px;
+}
+
+i.fa.fa-chevron-down {
+  font-size: 16px;
+}
+
 /* STRUCTURE SECTION */
 li {
   display: inline;
@@ -168,6 +180,7 @@ a.selected:visited {
   background-size: cover;
   background-image: url('../images/hero.jpg');
   background-position: top right;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -252,7 +265,7 @@ a.selected:visited {
 }
 
 .contact {
-  background: #4ac4ca; /* For browsers that do not support gradients */
+  background: #2754a7; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(135deg, #4ac4ca, #2754a7); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(135deg, #4ac4ca, #2754a7); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(135deg, #4ac4ca, #2754a7); /* For Firefox 3.6 to 15 */

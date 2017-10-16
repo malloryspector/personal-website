@@ -4,7 +4,6 @@ $(document).ready(function() {
     cursor: true,
     lifeLike: true
   })
-  .tiPause(1000)
   .tiType("Hello, I'm Mallory ")
 
   /*
